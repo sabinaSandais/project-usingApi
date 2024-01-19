@@ -1,4 +1,3 @@
-// main.js
 import { fetchWinePairing } from "./wineApi.js";
 import {
   renderPairedWines,

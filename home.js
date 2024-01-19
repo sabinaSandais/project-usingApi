@@ -1,6 +1,6 @@
 export const homeContent = `
 <div class="Container" id="wineList">
-<h1>lets cook</h1>
+<h1>Wine Pairing </h1>
 <div class="img1">
   <img class="img" src="images/wine.png" alt="wine img" />
 </div>
