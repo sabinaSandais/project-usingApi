@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* for container change required make it different from body */
+
+
+/* welcome pg. */
+.img {
+  width: 100%;
+  height: 40vh;
+}
+h1 {
+  text-align: center;
+}
+
+.recipe-search {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wine-search {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form input[type="text"] {
+  flex-grow: 1;
+  margin-right: 15px;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50px;
+  background-color: aquamarine;
+}
+form button[type="submit"] {
+  background-color: wheat;
+  color: black;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50px;
+}
+
+form button[type="submit"]:hover {
+  background-color: rgb(161, 169, 185);
+}
