@@ -36,7 +36,7 @@ export function renderProductMatches(productMatches, wineListContainer) {
 
       const productLink = document.createElement("a");
       productLink.href = product.link;
-      productLink.textContent = "View on Amazon";
+      productLink.textContent = "Buy Here";
 
       productDetails.appendChild(productName);
 
