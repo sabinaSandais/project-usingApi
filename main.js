@@ -12,10 +12,10 @@ document.body.innerHTML = homeContent;
 async function searchPairing() {
   const dishInput = document.getElementById("dishInput");
   const wineListContainer = document.getElementById("wineList");
-  // const welcomeContainer = document.getElementById("welcomeCont");
+   const welcomeContainer = document.getElementById("welcomeCont");
   // Clear previous results
   wineListContainer.innerHTML = "";
-  // welcomeContainer.innerHTML = "";
+   welcomeContainer.innerHTML = "";
   const dish = dishInput.value.trim();
   if (!dish) {
     alert("Please enter a dish!");
