@@ -2,11 +2,12 @@ export const homeContent = `
 <header> <h1>My Food App </h1></header>
 <div class="cont1" >
 <div class="wine-search">
-<form id="match">
- <input type="text" 
-   id="dishInput" 
+<form id="wineMatch">
+ <input 
+     type="text" 
+     id="dishInput" 
      placeholder="Enter any dish..."
-      />
+  />
      <button type="submit" id="searchButton">Search wine</button>
 </form>
 </div>

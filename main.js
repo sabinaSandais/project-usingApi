@@ -1,11 +1,10 @@
-
-
 import { fetchWinePairing } from "./wineApi.js";
 import {
   renderPairedWines,
   renderPairingText,
   renderProductMatches,
 } from "./results.js";
+//import { welcomeContainer } from "./recipes.js";
 import { homeContent } from "./home.js";
 
 document.body.innerHTML = homeContent;
@@ -15,8 +14,8 @@ async function searchPairing() {
   const wineListContainer = document.getElementById("wineList");
   // const welcomeContainer = document.getElementById("welcomeCont");
   // Clear previous results
-  // wineListContainer.innerHTML = "";
-  welcomeContainer.innerHTML = "";
+  wineListContainer.innerHTML = "";
+  // welcomeContainer.innerHTML = "";
   const dish = dishInput.value.trim();
   if (!dish) {
     alert("Please enter a dish!");
@@ -40,9 +39,14 @@ async function searchPairing() {
 }
 
 // Adding event listener
+const wineSearchForm = document.getElementById("wineMatch");
+wineSearchForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevents the default form submission
+  searchPairing();
+});
 
-const button = document.getElementById("searchButton");
-button.addEventListener("click", searchPairing);
+//const button = document.getElementById("searchButton");
+//button.addEventListener("click", searchPairing);
 
 // Recipe search
 
