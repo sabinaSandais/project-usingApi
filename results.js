@@ -1,54 +1,33 @@
 export function renderPairedWines(pairedWines, wineListContainer) {
-  const pairedWinesElement = document.createElement("div");
-  pairedWinesElement.innerHTML = `<p>Paired Wines: ${pairedWines.join(
-    ", "
-  )}</p>`;
-  pairedWinesElement.classList.add("paired-wines");
-  wineListContainer.appendChild(pairedWinesElement);
+  wineListContainer.innerHTML += `
+    <div>
+      <p class= "paired-wines" > Paired Wines: ${pairedWines.join(", ")}</p>
+    </div>`;
 }
 
 export function renderPairingText(pairingText, wineListContainer) {
-  const pairingTextElement = document.createElement("p");
-  pairingTextElement.textContent = pairingText;
-  pairingTextElement.classList.add('pairing-text');
-  wineListContainer.appendChild(pairingTextElement);
+  wineListContainer.innerHTML += `
+    <p>${pairingText}</p>`;
 }
 
 export function renderProductMatches(productMatches, wineListContainer) {
   if (productMatches && productMatches.length > 0) {
-    const productMatchesElement = document.createElement("div");
-    productMatchesElement.innerHTML = "<h3>Product Matches:</h3>";
-
-    productMatches.forEach((product) => {
-      const productItem = document.createElement("div");
-      productItem.classList.add("wine-item");
-
-      const productImage = document.createElement("img");
-      productImage.classList.add("wine-image");
-      productImage.src = product.imageUrl;
-      productImage.alt = product.title;
-
-      const productDetails = document.createElement("div");
-      productDetails.classList.add("wine-details");
-
-      const productName = document.createElement("h3");
-      productName.textContent = product.title;
-
-      const productLink = document.createElement("a");
-      productLink.href = product.link;
-      productLink.textContent = "Buy Here";
-
-      productDetails.appendChild(productName);
-
-      productDetails.appendChild(productLink);
-
-      productItem.appendChild(productImage);
-      productItem.appendChild(productDetails);
-
-      productMatchesElement.appendChild(productItem);
-    });
-
-    wineListContainer.appendChild(productMatchesElement);
+    wineListContainer.innerHTML += `
+      <div>
+        <h2>Product Matches:</h2>
+        ${productMatches
+          .map(
+            (product) => `
+          <div class="wine-item">
+            <img class="wine-image" src="${product.imageUrl}" alt="${product.title}">
+            <div class="wine-details">
+              <h3>${product.title}</h3>
+              <a href="${product.link}" target="_blank">View on Amazon</a>
+            </div>
+          </div>`
+          )
+          .join("")}
+      </div>`;
   } else {
     alert("No product matches found for the specified dish.");
   }
