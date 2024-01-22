@@ -36,6 +36,9 @@ async function searchPairing() {
     console.error("Error fetching data:", error);
     alert("An error occurred while fetching data. Please try again.");
   }
+   // Clear the input field
+   dishInput.value = '';
+   
 }
 
 // Adding event listener
@@ -77,4 +80,5 @@ recipeSearchForm.addEventListener("submit", async function (event) {
     ).innerHTML = `<h2>Error in Fetching Recipes!</h2>`;
     console.error("Error fetching recipes:", error);
   }
+  searchBox.value= '';
 });
