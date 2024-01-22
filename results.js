@@ -17,7 +17,7 @@ export function renderPairingText(pairingText, wineListContainer) {
 export function renderProductMatches(productMatches, wineListContainer) {
   if (productMatches && productMatches.length > 0) {
     const productMatchesElement = document.createElement("div");
-    productMatchesElement.innerHTML = "<h2>Product Matches:</h2>";
+    productMatchesElement.innerHTML = "<h3>Product Matches:</h3>";
 
     productMatches.forEach((product) => {
       const productItem = document.createElement("div");
