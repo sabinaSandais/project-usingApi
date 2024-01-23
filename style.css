@@ -1,42 +1,40 @@
-/* .product-link:hover {
-  text-decoration: underline;
-} */
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f7eaeb;
+}
+header {
+  margin-bottom: 30px;
 }
 
 /* welcome pg. */
 .img {
-  margin-top: 80px;
+  margin-top: 50px;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
 }
 .Welcome-Para {
-  /* width: 700px; */
+ 
   text-align: center;
-  margin-left: 400px;
-  margin-right: 400px;
-  line-height: 1.6;
-  font-size: x-large;
-  /* padding-top: 30px; */
-  /* padding-bottom: 30px; */
-  /* padding-left: 150px;
-  margin-left: 90px; */
-
+  margin-left: 40px;
+  margin-right: 40px;
+  line-height: 1.4;
+  font-size: 22px;
   font-style: italic;
 }
 h1 {
   text-align: center;
   font-size: 50px;
+  letter-spacing: 1px;
   font-style: italic;
-  /* color: #722F37;*/
-  color :#800020
+  color: #9b0047;
 }
-
+h2{
+  font-size: 30px;
+  text-align: center;
+  margin-left: 350px;
+}
 .recipe-search {
   margin: 10px;
   display: flex;
@@ -52,13 +50,6 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
-/* check */
-/* form {
-  display: flex;
-  justify-content: center;
-} */
-
 form input[type="text"] {
   flex-grow: 1;
   margin-right: 15px;
@@ -66,9 +57,7 @@ form input[type="text"] {
   padding: 10px;
   font-size: 18px;
   border-radius: 50px;
-  /* background-color:#E0115F ; */
-  
-  background-color: aquamarine;
+  border: solid black;
 }
 form button[type="submit"] {
   background-color: wheat;
@@ -81,107 +70,112 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-  background-color: rgb(161, 169, 185);
+  background-color: rgb(231, 173, 65);
 }
 
-/* wine display pg */
+/* Paired Wines Display Page */
+
+#wineList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
 .paired-wines {
-  font-size: 30px;
-  text-decoration: underline;
+  font-size: 24px;
   font-weight: bold;
-  margin-top: 50px;
-  text-align: center;
+  color: #e0115f;
+  font-style: italic;
   margin-bottom: 20px;
-  color: red;
-}
-h3 {
-  text-align: center;
-  margin-top: 20px;
-  margin-left: 100px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  text-align: center;
 }
 
 .pairing-text {
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 40px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 20px;
   color: #555;
-}
-
-.product-matches {
-  margin-top: 20px;
+  line-height: 1.4;
+  font-size: 18px;
+  font-style: oblique;
 }
 
 .wine-item {
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5; /* Light Gray Background Color */
+  background-color: #fcd7c5;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  max-width: 400px;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+.wine-items {
+  background-color: #fcd7c5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 100px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 }
 
 .wine-image {
-  width: 250px;
-  height: 250px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  /* for media */
-  /* width: auto;
-  height: auto; */
+  background-color: #fcd7c5;
+  height: 300px;
+  border-radius: 6px;
+  max-width: 300px;
+  min-width: 100px;
 }
 
 .wine-details {
+  display: flex;
+  align-items: center;
   flex-grow: 1;
+  background-color: wheat;
+}
+
+.wine-item h3 {
+  background-color: #fcd7c5;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 22px;
+  white-space: nowrap;
+  width: 290px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px;
+  color: black;
+}
+
+h4 {
+  background-color: #fcd7c5;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: black;
 }
 
 .product-link {
-  color: #3498db;
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #e0115f;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
-/* 
-
-
-
-
-
-
-.wine-item {
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-
-  gap: 60px;
-  align-items: center;
-  border-radius: 4px;
-  margin-top: 20px;
-
-  margin-left: 200px;
-  margin-right: 200px;
+.product-link:hover {
+  background-color: #9b0047;
 }
 
-*/
-header {
-  margin-bottom: 20px;
-}
-
-/* .product-link:hover {
-  text-decoration: underline;
-} */
 /*  recipe cards */
-#wineList {
+#recipeCont {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -192,7 +186,6 @@ header {
 }
 
 .recipe {
-  /* background-color: #d1d5de; */
   background-color: wheat;
   display: flex;
   flex-direction: column;
@@ -216,6 +209,7 @@ header {
 }
 
 .recipe h3 {
+  background-color: wheat;
   margin: 10px 0;
   text-align: center;
   font-size: 22px;
@@ -227,6 +221,7 @@ header {
 }
 
 .recipe p {
+  background-color: wheat;
   font-size: 18px;
   margin: 5px 0;
   text-align: center;
@@ -241,32 +236,42 @@ header {
   cursor: pointer;
   font-weight: 600px;
   margin: 18px auto;
-  background-color: #9B0047;
-  color:whitesmoke;
-
-  /* background-color: #f46416; */
-  /* color: #fff; */
+  background-color: #e0115f;
+  color: whitesmoke;
 }
 
 .view-recipe:hover {
-  background-color:#E0115F;
-  /* background-color: #ff8c42; */
+  background-color: #9b0047;
 }
 
-@media screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
   #recipeSearchForm {
     display: flex;
     flex-direction: column;
-
     align-items: center;
   }
   #wineMatch {
     display: flex;
     flex-direction: column;
-
-    align-items: center;
+     align-items: center;
   }
   input {
     margin: 10px;
   }
+ 
+  .img {
+    height: 30vh;
+  }
+  .wine-item {
+    max-width: auto;
+  }
+  .wine-image {
+   height: auto;
+    min-width: auto;
+  }
+
 }
+
